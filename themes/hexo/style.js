@@ -28,7 +28,11 @@ const Style = () => {
 
   return (
     <style jsx global>{`
-      #theme-hexo {
+/* 客製：內文字級、圖片圓角、標題宋體 */
+#notion-article { font-size: 18px; }
+#notion-article img { border-radius: 0.75rem; }
+#article-wrapper h1, #notion-article .notion-h1, #notion-article .notion-h2, #notion-article .notion-h3 { font-family: 'Noto Serif TC', 'Noto Serif SC', serif; }
+#theme-hexo {
         --hexo-color-primary-light: ${primary};
         --hexo-color-primary-dark: ${primaryDark};
         --hexo-color-bg-light: ${background};

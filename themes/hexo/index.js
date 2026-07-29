@@ -65,7 +65,7 @@ const LayoutBase = props => {
     hexoArticleRouteLoading && isArticleSlugPage && onLoading
 
   const headerSlot = post ? (
-    <PostHero {...props} />
+    null
   ) : router.route === '/' &&
     siteConfig('HEXO_HOME_BANNER_ENABLE', null, CONFIG) ? (
     <Hero {...props} />
@@ -305,6 +305,14 @@ const LayoutSlug = props => {
             <article
               id='article-wrapper'
               className='subpixel-antialiased overflow-y-hidden'>
+              {/* 文章標題區 */}
+         <div className='px-5 pt-6 mx-auto max-w-2xl lg:max-w-full'>
+                <SmartLink href='/' className='text-sm text-gray-500 hover:underline'>← 回到列表</SmartLink>
+         <div className='mt-4 text-sm text-gray-500'>{post?.category} / {post?.publishDay} 發佈</div>
+          <h1 className='mt-2 text-3xl md:text-4xl font-bold leading-snug dark:text-gray-100'>{post?.title}</h1>
+{post?.tagItems && <div className='mt-4 flex flex-wrap'>{post?.tagItems.map(tag => (<TagItemMini key={tag.name} tag={tag} />))}</div>}
+<hr className='my-6' />
+  </div>
               {/* Notion文章主体 */}
               <section className='px-5 justify-center mx-auto max-w-2xl lg:max-w-full'>
                 {post && <NotionPage post={post} />}

@@ -1,5 +1,5 @@
-const CONFIG = {
-  HEXO_HOME_BANNER_ENABLE: false,
+  const CONFIG = {
+      HEXO_HOME_BANNER_ENABLE: false,
   // 3.14.1以后的版本中，欢迎语在blog.config.js中配置，用英文逗号','隔开多个。
   HEXO_HOME_BANNER_GREETINGS: [
     'Hi，我是一个程序员',
@@ -42,8 +42,8 @@ const CONFIG = {
   HEXO_WIDGET_DARK_MODE: true, // 夜间模式
   HEXO_WIDGET_TOC: true, // 移动端悬浮目录
 
-  HEXO_COLOR_PRIMARY: '#928CEE',
-  HEXO_THEME_COLOR: '#928CEE', // 主题色配置（默认为 #928CEE）
+    HEXO_COLOR_PRIMARY: '#8c7b75',
+    HEXO_THEME_COLOR: '#8c7b75', // 主題色
 
   /** 文章详情页客户端切换时，主栏显示卡片+转圈占位（无全屏遮罩；已有独立 LoadingCover 的主题无需此项） */
   HEXO_ARTICLE_ROUTE_LOADING: true
